@@ -1,0 +1,11 @@
+cluster.functions = makeClusterFunctionsSLURM('~/.slurm.tmpl')
+mail.start = "none"
+mail.done = "none"
+mail.error = "none"
+mail.from = ""
+mail.to = ""
+mail.control = list(smtpServer="")
+ssh = TRUE
+node = 'login'
+fs.timeout = 10
+staged.queries = TRUE
