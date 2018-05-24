@@ -1,5 +1,5 @@
 ## User specified executables
-Sys.setenv("GITHUB_PAT" = "1dbb47bf4d389e787dcdef5fb511edf644436670")
+#Sys.setenv("GITHUB_PAT" = "6c644ba8b92e2a23d0d3eaf6509d90d24ff9811c")
 Sys.setenv("PATH" = paste("/usr/local/bin", Sys.getenv("PATH"), "/Users/DGola/bin", sep=":"))
 options(texi2dvi = "/usr/bin/texi2dvi")
 
