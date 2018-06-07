@@ -1,22 +1,14 @@
-CC=/usr/local/opt/gcc/bin/gcc-7 -fopenmp
-CXX=/usr/local/opt/gcc/bin/g++-7
-CXX1X = /usr/local/opt/gcc/bin/g++-7
-CXX11 = /usr/local/opt/gcc/bin/g++-7
-CXX14 = /usr/local/opt/gcc/bin/g++-7
-CXX17 = /usr/local/opt/gcc/bin/g++-7
-F77 = /usr/local/opt/gcc/bin/gfortran-7
+CC=/usr/local/opt/llvm/bin/clang -fopenmp
+CXX=/usr/local/opt/llvm/bin/clang++ -fopenmp
 # -O3 should be faster than -O2 (default) level optimisation ..
 CFLAGS=-g -O3 -Wall -pedantic -std=gnu99 -mtune=native -pipe
 CXXFLAGS=-g -O3 -Wall -pedantic -std=c++11 -mtune=native -pipe
-LDFLAGS=-L/usr/local/opt/gettext/lib -L/usr/local/opt/gcc/lib -Wl,-rpath,/usr/local/opt/gcc/lib
-CPPFLAGS=-I/usr/local/opt/gettext/include -I/usr/local/opt/gcc/include
-SHLIB_OPENMP_CFLAGS= -fopenmp
-SHLIB_OPENMP_CXXFLAGS= -fopenmp
-SHLIB_OPENMP_FCFLAGS= -fopenmp
-SHLIB_OPENMP_FFLAGS= -fopenmp
-FLIBS = -L/usr/local/opt/gcc/lib -lgfortran -lquadmath -lm
-PKG_LIBS=-L/usr/local/Cellar/gettext/0.19.8.1/lib 
-CPPFLAGS=-I/usr/local/opt/openssl/include
-LDFLAGS=-L/usr/local/Cellar/openssl/1.0.2n/lib -lssl -lcrypto
-DYLD_LIBRARY_PATH=/usr/local/opt/openssl/lib
-OPENSSL_INCLUDES="/usr/local/opt/openssl/include/"
+LDFLAGS=-L/usr/local/opt/gettext/lib -L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib
+CPPFLAGS=-I/usr/local/opt/gettext/include -I/usr/local/opt/llvm/include
+CC=/usr/local/opt/llvm/bin/clang
+CXX=/usr/local/opt/llvm/bin/clang++
+# -O3 should be faster than -O2 (default) level optimisation ..
+CFLAGS=-g -O3 -Wall -pedantic -std=gnu99 -mtune=native -pipe
+CXXFLAGS=-g -O3 -Wall -pedantic -std=c++11 -mtune=native -pipe
+LDFLAGS=-L/usr/local/opt/gettext/lib -L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib
+CPPFLAGS=-I/usr/local/opt/gettext/include -I/usr/local/opt/llvm/include
