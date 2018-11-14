@@ -1,14 +1,7 @@
-CC=/usr/local/opt/llvm/bin/clang -fopenmp
-CXX=/usr/local/opt/llvm/bin/clang++ -fopenmp
+#CC=/usr/local/bin/gcc-8 -fopenmp # use -fopenmp for data.table
+#CXX=/usr/local/bin/g++-8 -fopenmp # use -fopenmp for data.table
 # -O3 should be faster than -O2 (default) level optimisation ..
-CFLAGS=-g -O3 -Wall -pedantic -std=gnu99 -mtune=native -pipe
-CXXFLAGS=-g -O3 -Wall -pedantic -std=c++11 -mtune=native -pipe
-LDFLAGS=-L/usr/local/opt/gettext/lib -L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib
-CPPFLAGS=-I/usr/local/opt/gettext/include -I/usr/local/opt/llvm/include
-CC=/usr/local/opt/llvm/bin/clang
-CXX=/usr/local/opt/llvm/bin/clang++
-# -O3 should be faster than -O2 (default) level optimisation ..
-CFLAGS=-g -O3 -Wall -pedantic -std=gnu99 -mtune=native -pipe
-CXXFLAGS=-g -O3 -Wall -pedantic -std=c++11 -mtune=native -pipe
-LDFLAGS=-L/usr/local/opt/gettext/lib -L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib
-CPPFLAGS=-I/usr/local/opt/gettext/include -I/usr/local/opt/llvm/include
+#CFLAGS=-g -O3 -Wall -pedantic -std=gnu99 -mtune=native -pipe
+#CXXFLAGS=-g -O3 -Wall -pedantic -std=c++11 -mtune=native -pipe
+#LDFLAGS=-L/usr/local/opt/gettext/lib -L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib -L/usr/local/opt/openssl/lib
+#CPPFLAGS=-I/usr/local/opt/gettext/include -I/usr/local/opt/llvm/include -I/usr/local/opt/openssl/include
